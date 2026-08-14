@@ -70,22 +70,22 @@ function createStockCard(stock) {
                 <tr>
                     <th>지표</th>
                     <th>가격</th>
-                    <th>이격도</th>
+                    <th>평균 대비</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>SMA 20</td>
+                    <td>20일 평균</td>
                     <td>$${stock.sma20}</td>
                     <td><span class="diff-badge ${stock.sma20_diff >= 0 ? 'plus' : 'minus'}">${stock.sma20_diff}%</span></td>
                 </tr>
                 <tr>
-                    <td>SMA 60</td>
+                    <td>60일 평균</td>
                     <td>$${stock.sma60}</td>
                     <td><span class="diff-badge ${stock.sma60_diff >= 0 ? 'plus' : 'minus'}">${stock.sma60_diff}%</span></td>
                 </tr>
                 <tr>
-                    <td>SMA 120</td>
+                    <td>120일 평균</td>
                     <td>$${stock.sma120}</td>
                     <td><span class="diff-badge ${stock.sma120_diff >= 0 ? 'plus' : 'minus'}">${stock.sma120_diff}%</span></td>
                 </tr>
