@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-08-24 23:47:12",
+    "last_updated": "2026-08-25 06:52:20",
     "session_type": "morning",
     "session_name": "아침 장마감 확정",
     "stocks": [
@@ -23,15 +23,15 @@
         {
             "ticker": "SSO",
             "name": "ProShares Ultra S&P500 (2x)",
-            "current_price": 69.77,
-            "change_rate": -0.54,
+            "current_price": 69.73,
+            "change_rate": -0.6,
             "sma20": 69.93,
             "sma60": 68.0,
             "sma120": 63.7,
-            "rsi": 39.31,
-            "sma20_diff": -0.22,
-            "sma60_diff": 2.6,
-            "sma120_diff": 9.52,
+            "rsi": 39.11,
+            "sma20_diff": -0.28,
+            "sma60_diff": 2.54,
+            "sma120_diff": 9.46,
             "stage_code": 1,
             "stage_name": "1단계 (초록)",
             "badge_color": "green",
@@ -40,19 +40,19 @@
         {
             "ticker": "USD",
             "name": "ProShares Ultra Semiconductors (2x)",
-            "current_price": 79.36,
-            "change_rate": -6.05,
-            "sma20": 86.32,
-            "sma60": 92.39,
+            "current_price": 79.41,
+            "change_rate": -5.99,
+            "sma20": 86.33,
+            "sma60": 92.4,
             "sma120": 81.19,
-            "rsi": 34.98,
-            "sma20_diff": -8.07,
-            "sma60_diff": -14.11,
-            "sma120_diff": -2.26,
-            "stage_code": 4,
-            "stage_name": "4단계 (강력 매수)",
-            "badge_color": "red",
-            "action_guide": "남은 투자금 전액을 5일간 분할 매수하세요."
+            "rsi": 35.03,
+            "sma20_diff": -8.01,
+            "sma60_diff": -14.05,
+            "sma120_diff": -2.19,
+            "stage_code": 3,
+            "stage_name": "3단계 (주황)",
+            "badge_color": "orange",
+            "action_guide": "남은 투자금의 50%를 5일간 분할 매수하세요."
         }
     ]
 }
