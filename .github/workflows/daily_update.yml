@@ -1,0 +1,52 @@
+name: Daily Stock Data Update
+
+on:
+  schedule:
+    # 1. 아침 07:00 KST (UTC 22:00, 화~토) -> 썸머타임/겨울 무관 미국 장마감 정산 완료치 반영
+    - cron: '0 22 * * 1-5'
+    # 2. 밤 23:45 KST (UTC 14:45, 월~금) -> 썸머타임/겨울 무관 미국 본장 실시간 시세 반영
+    - cron: '45 14 * * 1-5'
+  workflow_dispatch: # 수동 즉시 갱신 버튼
+    inputs:
+      mode:
+        description: '수집 모드 선택 (auto: 자동 감지, morning: 아침 마감, night: 밤 실시간)'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - morning
+          - night
+
+permissions:
+  contents: write # data.json을 업데이트하여 커밋/푸시할 수 있는 권한
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 환경 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 필수 라이브러리 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance pandas requests pytz
+
+      - name: 데이터 수집 및 지표 계산 스크립트 실행
+        run: |
+          python collector.py --mode ${{ github.event.inputs.mode || 'auto' }}
+
+      - name: 변경된 data.json 자동 커밋 및 푸시
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Auto Update: Stock data updated [skip ci]" || echo "No changes to commit"
+          git push
