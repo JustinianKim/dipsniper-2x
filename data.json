@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-11 06:01:24",
+    "last_updated": "2026-11-11 10:36:43",
     "session_type": "morning",
     "session_name": "아침 장마감 확정",
     "stocks": [
@@ -23,15 +23,15 @@
         {
             "ticker": "SSO",
             "name": "ProShares Ultra S&P500 (2x)",
-            "current_price": 66.36,
-            "change_rate": -0.73,
+            "current_price": 66.37,
+            "change_rate": -0.72,
             "sma20": 68.63,
             "sma60": 69.71,
             "sma120": 68.71,
-            "rsi": 38.96,
-            "sma20_diff": -3.3,
-            "sma60_diff": -4.81,
-            "sma120_diff": -3.42,
+            "rsi": 38.98,
+            "sma20_diff": -3.29,
+            "sma60_diff": -4.79,
+            "sma120_diff": -3.4,
             "stage_code": 3,
             "stage_name": "3단계 (주황)",
             "badge_color": "orange",
